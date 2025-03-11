@@ -1,8 +1,11 @@
 package com.aroundhub.bank.bank;
 
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 
 public class Account {
+  @Id
   private String number;
 
   private String type;
