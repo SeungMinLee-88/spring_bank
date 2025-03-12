@@ -1,4 +1,4 @@
-package com.aroundhub.bank.bank;
+package com.aroundhub.bank.account;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,10 +1,19 @@
-package com.aroundhub.bank.bank;
+package com.aroundhub.bank.account;
 
+import com.aroundhub.bank.common.entity.BaseEntity;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-public class Account {
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Account extends BaseEntity {
   @Id
   private String number;
 
