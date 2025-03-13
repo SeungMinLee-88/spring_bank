@@ -6,14 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BankApplication {
 
-/*	private final Logger LOGGER = LoggerFactory.getLogger(BankApplication.class);
+  /*	private final Logger LOGGER = LoggerFactory.getLogger(BankApplication.class);
 
-	Week today = Week.MONDAY;*/
+  Week today = Week.MONDAY;*/
 
-	public static void main(String[] args) {
-		SpringApplication.run(BankApplication.class, args);
-	}
-
-
-
+  public static void main(String[] args) {
+    SpringApplication.run(BankApplication.class, args);
+  }
 }

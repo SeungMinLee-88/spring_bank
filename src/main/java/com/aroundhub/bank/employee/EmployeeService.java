@@ -1,4 +1,3 @@
 package com.aroundhub.bank.employee;
 
-public class EmployeeService {
-}
+public class EmployeeService {}

@@ -1,10 +1,20 @@
 package com.aroundhub.bank.account;
 
-import lombok.extern.slf4j.Slf4j;
+import com.aroundhub.bank.account.dto.AccountGetResponse;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
 
-@Slf4j
+import java.util.List;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/api/v1")
 public class AccountController {
-  void test(){
-    log.info("1111111111");
+  private final AccountService accountService;
+
+  @GetMapping("/accounts") // TODO: header -> customer
+  public List<AccountGetResponse> getAccounts(@RequestParam long id){
+
+    return accountService.getAccounts(id);
   }
 }

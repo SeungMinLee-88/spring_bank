@@ -1,4 +1,3 @@
 package com.aroundhub.bank.transaction;
 
-public class TransactionService {
-}
+public class TransactionService {}

@@ -1,4 +1,3 @@
 package com.aroundhub.bank.branch;
 
-public class BranchController {
-}
+public class BranchController {}
