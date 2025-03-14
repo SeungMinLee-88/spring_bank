@@ -10,6 +10,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,4 +30,6 @@ public class Transaction {
   private long balanceAfterTransaction;
 
   private String accountNumber;
+  private LocalDateTime createdAt;
+  private LocalDateTime updatedAt;
 }
