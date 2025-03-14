@@ -2,4 +2,11 @@ package com.aroundhub.bank.transaction;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TransactionRepository extends JpaRepository<Transaction, Long> {}
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
+
+public interface TransactionRepository extends JpaRepository<Transaction, Long> {
+  List<Transaction> findByAccountNumberAndCreatedAtBetween(String accountNumber, LocalDateTime start, LocalDateTime end);
+
+}
