@@ -32,7 +32,6 @@ public class TransactionService {
     Account withdrawAccount = accountRepository.findAccountByNumber(request.getRequestAccountNumber())
             .orElseThrow();
 
-    System.out.println("chk 1111111111");
     long amount = withdrawAccount.getBalance();
 
     Transaction withdraw = Transaction.builder()
@@ -40,12 +39,7 @@ public class TransactionService {
             .type("withdraw")
             .balanceAfterTransaction(amount - request.getRequestAmount())
             .accountNumber(request.getRequestAccountNumber()).build();
-    System.out.println("chk 22222222");
-
-    System.out.println("withdraw : " + withdraw.getCreatedAt());
-    System.out.println("withdraw : " + withdraw.getCreatedAt());
     transactionRepository.save(withdraw);
-    System.out.println("chk 3333333333");
 
     /*Account depositAccount = accountRepository.findAccountByNumber(request.getTargetAccountNumber())
             .orElseThrow();
