@@ -1,5 +1,6 @@
 package com.aroundhub.bank.transaction;
 
+import com.aroundhub.bank.common.entity.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +18,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Builder
-public class Transaction {
+public class Transaction extends BaseEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,6 +31,4 @@ public class Transaction {
   private long balanceAfterTransaction;
 
   private String accountNumber;
-  private LocalDateTime createdAt;
-  private LocalDateTime updatedAt;
 }
